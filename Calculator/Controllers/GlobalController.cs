@@ -12,7 +12,7 @@ namespace HaravProgSite.Controllers
 {
     //Global controller for implement client results
     [ApiController]
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     public class GlobalController : ControllerBase
     {
         #region Json

@@ -17,26 +17,34 @@ namespace Calculator.Controllers
         {
             this.calcSV = calcSV;
         }
+
+        [HttpPost("[action]"), ActionName("sum")]
         public GResult<double> Sum(Exersice exercise)
         {
             var res = calcSV.Sum(exercise);
             return Success(res);
         }
 
+        [HttpGet]
         public GResult<List<ExersiceDetails>> GetExersiceDetails()
         {
             return Success(calcSV.GetExersiceDetails());
         }
 
+        [HttpPost]
         public Result AddExersice(ExersiceDetails exercise)
         {
             return Success(calcSV.AddExersice(exercise));
         }
+
+        [HttpPut]
         public Result UpdateExersice(ExersiceDetails exercise)
         {
             var res = calcSV.UpdateExersice(exercise);
             return res == ResultType.Success ? Success() : Fail("התרגיל המבוקש אינו קיים במאגר");
         }
+
+        [HttpDelete]
         public Result DeleteExersice(int id)
         {
             var res = calcSV.DeleteExersice(id);

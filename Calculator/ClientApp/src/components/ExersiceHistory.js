@@ -19,7 +19,7 @@ export class ExersiceHistory extends Component {
         const requestOptions = {
             headers: { 'Content-Type': 'application/json' },
         };
-        fetch(`${Const.GetExersiceDetails}`, requestOptions)
+        fetch(`${Const.Base_Url}`, requestOptions)
             .then(res => res.json())
             .then(res => {
                 if (res.success) {
@@ -40,9 +40,9 @@ export class ExersiceHistory extends Component {
         };
         var url = "";
         if (event.id) {
-            url = Const.UpdateExersice;
+            url = Const.Base_Url;
         } else {
-            url = Const.AddExersice;
+            url = Const.Base_Url;
         }
         fetch(`${url}`, requestOptions)
             .then(res => res.json())
@@ -74,7 +74,7 @@ export class ExersiceHistory extends Component {
         const requestOptions = {
             headers: { 'Content-Type': 'application/json' },
         };
-        fetch(`${Const.DeleteExersice}?id=${id}`, requestOptions)
+        fetch(`${Const.Base_Url}?id=${id}`, requestOptions)
             .then(res => res.json())
             .then(res => {
                 if (res.success) {

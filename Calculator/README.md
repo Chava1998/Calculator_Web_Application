@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/Chava1998/Calculator/master/Calculator/ClientApp/src/images/calculator.png"
+<img src="https://icon-library.com/images/google-calculator-icon/google-calculator-icon-28.jpg"
 alt="drawing" width="220"/>
 <div>
 <h1>Calculation App with React.js and Net.Core 5</h1>
